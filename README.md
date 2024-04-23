@@ -135,6 +135,8 @@ set_var EASYRSA_CRL_DAYS     180
 In the process of installation these vars will be copied to container volume `/etc/openvpn/pki/vars` and used during all EasyRSA operations.
 You can update all these parameters later with OpenVPN UI on `Configuration > EasyRSA vars` page.
 
+**Run the Docker composer**
+Sudo docker-compose up -d
 
 ### Run with Docker:
 ```shell
@@ -351,6 +353,8 @@ ifconfig-push 10.0.71.2 255.255.255.0
 
 > Keep in mind, by default, all the clients have full access, so you don't need to specifically configure static IP for your own devices, your home devices always will land to **"Trusted"** subnet by default. 
 
+## NOTES
+If you are having issue connecting to the Openvpn-server server with your client using the 'udp' proto, try to change it to 'tcp' instead
 
 ### Screenshots of managing OpenVPN Server with OpenVPN UI:
 
@@ -385,3 +389,5 @@ ifconfig-push 10.0.71.2 255.255.255.0
 <img src="https://github.com/d3vilh/openvpn-ui/blob/main/docs/images/OpenVPN-UI-Logs.png" alt="OpenVPN-UI Logs screen" width="1000" border="1" />
 
 <a href="https://www.buymeacoffee.com/d3vilh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="51" width="217"></a>
+
+
